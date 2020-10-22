@@ -1,0 +1,32 @@
+<div *ngIf="nombre">
+    {{nombre}}
+  </div>
+<div *ngIf="listaHabilidades">
+  <table class="table table-bordered">
+    <tr>
+      <td>Nombre</td>
+      <td>Descripcion</td>
+    </tr>
+    <tr *ngFor="let item of listaHabilidades">
+      <td>{{item.nombre}}</td>
+      <td>{{item.descripcion}}</td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="imagenes">
+  <div class="row">
+    <div class="col-3">
+      <img [src]="imagenes.back_default" alt="Lights" style="width:100%">
+    </div>
+    <div class="col-3">
+      <img [src]="imagenes.back_shiny" alt="Nature" style="width:100%">
+    </div>
+    <div class="col-3">
+      <img [src]="imagenes.front_default" alt="Fjords" style="width:100%">
+    </div>
+  </div>
+  <div class="col-3">
+    <img [src]="imagenes.front_shiny" alt="Fjords" style="width:100%">
+  </div>
+</div>
+

@@ -1,0 +1,8 @@
+<ngb-pagination [collectionSize]="listaPokemones.length" [pageSize]="itemsPerPage" [(page)]="page"></ngb-pagination>
+  <table class="table table-bordered">
+    <tr *ngFor="let item of listaPokemones | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+    <td>{{item.name}}</td>
+    <td><button><a  [routerLink]="['/detalle', item.name]" routerLinkActive="router-link-active">Detalle</a></button></td>
+    <td><button><a  [routerLink]="['/moves', item.name]" routerLinkActive="router-link-active">Movimientos</a></button></td>
+    </tr>
+  </table>

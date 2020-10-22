@@ -1,0 +1,15 @@
+
+  <table  class="table table-bordered">
+    <tr>
+      <td>Nombre</td>
+      <td>Level learn at</td>
+      <td>Move learn method name</td>
+      <td>Version group name</td>
+    </tr>
+    <tr *ngFor="let item of listaMovimientos">
+    <td>{{item.nombre}}</td>
+    <td>{{item.level_learn_at}}</td>
+    <td>{{item.move_learn_method_name}}</td>
+    <td>{{item.version_group_name}}</td>
+    </tr>
+  </table>
